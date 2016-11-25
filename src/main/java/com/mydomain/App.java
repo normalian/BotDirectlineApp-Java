@@ -39,16 +39,16 @@ public class App {
 			do {
 				ActivitySet activitySet = //
 						conversationsApi.conversationsGetActivities(conv.getConversationId(), watermark);
-				System.out.println("activitySet size = " + activitySet.getActivities().size());
+				System.out.println("@@activitySet size = " + activitySet.getActivities().size());
 				for (Activity activity : activitySet.getActivities()) {
 					System.out.println("\t" + activity.getFrom().getName() + " says \"" + activity.getText() + "\"");
 				}
 				if (activitySet.getWatermark() == null || watermark.equals(activitySet.getWatermark()) == false)
 					break;
 				watermark = activitySet.getWatermark();
-				System.out.println("watermark = " + watermark);
+				System.out.println("\twatermark = " + watermark);
 			} while (true);
 		}
-		System.out.println("end");
+		System.out.println("@@end");
 	}
 }
