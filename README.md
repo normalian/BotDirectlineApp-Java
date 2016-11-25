@@ -50,3 +50,7 @@ Revised code is below.
     Object postBody = "";
     byte[] postBinaryBody = null;
 ```
+
+## Reference
+- https://docs.botframework.com/en-us/restapi/directline3/#navtitle
+- http://qiita.com/Quramy/items/c583f3213f0b77ff1bac
