@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * An object representing a conversation or a conversation token
  **/
 @ApiModel(description = "An object representing a conversation or a conversation token")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-23T14:09:23.830+09:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-25T17:39:24.796+09:00")
 public class Conversation   {
   
   private String conversationId = null;

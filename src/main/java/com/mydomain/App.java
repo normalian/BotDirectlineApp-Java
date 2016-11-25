@@ -11,45 +11,44 @@ import io.swagger.client.model.ResourceResponse;
 
 public class App {
 	public static void main(String[] args) throws ApiException, InterruptedException {
-		String apiKey = "j5n4AG6JlPM.cwA.hKg.y4sIS1S8vYlQwqK8Vb2JCp411qsW7MNhGkL0Y_emD2U";
+		String apiKey = "<your secret key token from https://dev.botframework.com/>";
 		ConversationsApi conversationsApi = new ConversationsApi();
 		ApiClient client = conversationsApi.getApiClient();
 		client.addDefaultHeader("Authorization", "Bearer " + apiKey);
 
-		Conversation conv = conversationsApi.conversationsStartConversation();
-		conversationsApi.getHeaderParams().put("Authorization", "Bearer " + apiKey);
-		System.out.println("@@conversation start");
+		// Enable Jersey LoggingFilter and you can check contents of requests
+		client.setDebugging(true);
 
-		Activity activity = new Activity();
+		System.out.println("@@conversation start");
+		Conversation conv = conversationsApi.conversationsStartConversation();
 		{
-			activity.setText("hello");
+			System.out.println("@@post a conversation message");
+			Activity activity = new Activity();
 			ChannelAccount channelAccount = new ChannelAccount();
 			channelAccount.setName("user1");
 			channelAccount.setId("directline");
 			activity.setFrom(channelAccount);
-			activity.setRecipient(channelAccount);
 			activity.setType("Message");
-			activity.setLocale("ja-JP");
-			System.out.println("@@post conversation message");
-			ResourceResponse response1 = conversationsApi.conversationsPostActivity(conv.getConversationId(), activity);
-
-			ActivitySet activitySet1 = conversationsApi.conversationsGetActivities(conv.getConversationId(), "");
-			String watermark1 = activitySet1.getWatermark();
-			System.out.println("activitySet1 = " + activitySet1.getActivities());
+			activity.setText("hello my bot!");
+			ResourceResponse response = conversationsApi.conversationsPostActivity(conv.getConversationId(), activity);
 		}
+
 		{
-			System.out.println("@@post conversation message");
-			for (int i = 1; i <= 5; i++) {
-				Thread.sleep(1000);
-				ActivitySet activitySet1 = conversationsApi.conversationsGetActivities(conv.getConversationId(), "");
-				String watermark1 = activitySet1.getWatermark();
-				System.out.println("activitySet size = " + activitySet1.getActivities().size());
-				for (Activity a : activitySet1.getActivities()) {
-					System.out.println("\t" + a.getText());
+			System.out.println("@@get conversation messages");
+			String watermark = "";
+			do {
+				ActivitySet activitySet = //
+						conversationsApi.conversationsGetActivities(conv.getConversationId(), watermark);
+				System.out.println("activitySet size = " + activitySet.getActivities().size());
+				for (Activity activity : activitySet.getActivities()) {
+					System.out.println("\t" + activity.getFrom().getName() + " says \"" + activity.getText() + "\"");
 				}
-			}
+				if (activitySet.getWatermark() == null || watermark.equals(activitySet.getWatermark()) == false)
+					break;
+				watermark = activitySet.getWatermark();
+				System.out.println("watermark = " + watermark);
+			} while (true);
 		}
-
 		System.out.println("end");
 	}
 }

@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * Thing (entity type: \&quot;https://schema.org/Thing\&quot;)
  **/
 @ApiModel(description = "Thing (entity type: \"https://schema.org/Thing\")")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-23T14:09:23.830+09:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-25T17:39:24.796+09:00")
 public class Thing   {
   
   private String type = null;

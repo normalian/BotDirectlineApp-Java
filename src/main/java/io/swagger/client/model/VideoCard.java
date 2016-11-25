@@ -16,7 +16,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * A video card
  **/
 @ApiModel(description = "A video card")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-23T14:09:23.830+09:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-25T17:39:24.796+09:00")
 public class VideoCard   {
   
   private String aspect = null;

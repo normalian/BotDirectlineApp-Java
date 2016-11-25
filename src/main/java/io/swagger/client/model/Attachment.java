@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * An attachment within an activity
  **/
 @ApiModel(description = "An attachment within an activity")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-23T14:09:23.830+09:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-25T17:39:24.796+09:00")
 public class Attachment   {
   
   private String contentType = null;

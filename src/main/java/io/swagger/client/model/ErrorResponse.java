@@ -13,7 +13,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * An HTTP API response
  **/
 @ApiModel(description = "An HTTP API response")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-23T14:09:23.830+09:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-25T17:39:24.796+09:00")
 public class ErrorResponse   {
   
   private Error error = null;

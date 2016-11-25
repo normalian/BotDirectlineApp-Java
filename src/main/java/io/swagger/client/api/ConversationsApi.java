@@ -14,18 +14,9 @@ import java.io.File;
 
 import java.util.*;
 
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-23T14:09:23.830+09:00")
+@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-11-25T17:39:24.796+09:00")
 public class ConversationsApi {
 	private ApiClient apiClient;
-	private Map<String, String> headerParams = new HashMap<String, String>();
-
-	public Map<String, String> getHeaderParams() {
-		return headerParams;
-	}
-
-	public void setHeaderParams(Map<String, String> headerParams) {
-		this.headerParams = headerParams;
-	}
 
 	public ConversationsApi() {
 		this(Configuration.getDefaultApiClient());
@@ -57,12 +48,15 @@ public class ConversationsApi {
 
 		// query params
 		List<Pair> queryParams = new ArrayList<Pair>();
+		Map<String, String> headerParams = new HashMap<String, String>();
 		Map<String, Object> formParams = new HashMap<String, Object>();
 
 		final String[] accepts = { "application/json", "text/json", "text/html", "application/xml", "text/xml" };
 		final String accept = apiClient.selectHeaderAccept(accepts);
 
-		final String[] contentTypes = { "application/json" };
+		final String[] contentTypes = {
+
+		};
 		final String contentType = apiClient.selectHeaderContentType(contentTypes);
 
 		String[] authNames = new String[] {};
@@ -83,7 +77,7 @@ public class ConversationsApi {
 	 */
 	public Conversation conversationsReconnectToConversation(String conversationId, String watermark)
 			throws ApiException {
-		Object postBody = new Object();
+		Object postBody = null;
 		byte[] postBinaryBody = null;
 
 		// verify the required parameter 'conversationId' is set
@@ -98,6 +92,7 @@ public class ConversationsApi {
 
 		// query params
 		List<Pair> queryParams = new ArrayList<Pair>();
+		Map<String, String> headerParams = new HashMap<String, String>();
 		Map<String, Object> formParams = new HashMap<String, Object>();
 
 		queryParams.addAll(apiClient.parameterToPairs("", "watermark", watermark));
@@ -145,6 +140,7 @@ public class ConversationsApi {
 
 		// query params
 		List<Pair> queryParams = new ArrayList<Pair>();
+		Map<String, String> headerParams = new HashMap<String, String>();
 		Map<String, Object> formParams = new HashMap<String, Object>();
 
 		queryParams.addAll(apiClient.parameterToPairs("", "watermark", watermark));
@@ -197,6 +193,7 @@ public class ConversationsApi {
 
 		// query params
 		List<Pair> queryParams = new ArrayList<Pair>();
+		Map<String, String> headerParams = new HashMap<String, String>();
 		Map<String, Object> formParams = new HashMap<String, Object>();
 
 		final String[] accepts = { "application/json", "text/json", "text/html" };
@@ -244,6 +241,7 @@ public class ConversationsApi {
 
 		// query params
 		List<Pair> queryParams = new ArrayList<Pair>();
+		Map<String, String> headerParams = new HashMap<String, String>();
 		Map<String, Object> formParams = new HashMap<String, Object>();
 
 		queryParams.addAll(apiClient.parameterToPairs("", "userId", userId));
