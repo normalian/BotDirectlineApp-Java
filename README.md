@@ -11,7 +11,7 @@ You can use this sample after following below steps.
 ## How to make this sample?
 You can get swagger.json from https://docs.botframework.com/en-us/restapi/directline3/#navtitle and generate Java codes for Direct Line API.
 
-You should run below commands in a folder including swagger.json.
+Run below commands in a folder including swagger.json.
 ```
 wget https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.1.4/swagger-codegen-cli-2.1.4.jar
 java -jar swagger-codegen-cli-2.1.4.jar generate -i swagger.json -l java
