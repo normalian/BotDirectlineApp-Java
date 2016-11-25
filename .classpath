@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="var" path="M2_REPO/io/swagger/swagger-annotations/1.5.4/swagger-annotations-1.5.4.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/sun/jersey/jersey-client/1.18/jersey-client-1.18.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/sun/jersey/jersey-core/1.18/jersey-core-1.18.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/sun/jersey/contribs/jersey-multipart/1.18/jersey-multipart-1.18.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/jvnet/mimepull/mimepull/1.9.3/mimepull-1.9.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-core/2.4.2/jackson-core-2.4.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-annotations/2.4.2/jackson-annotations-2.4.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/core/jackson-databind/2.4.2/jackson-databind-2.4.2.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/datatype/jackson-datatype-joda/2.1.5/jackson-datatype-joda-2.1.5.jar"/>
+  <classpathentry kind="var" path="M2_REPO/joda-time/joda-time/2.3/joda-time-2.3.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.8.1/junit-4.8.1.jar"/>
+</classpath>
