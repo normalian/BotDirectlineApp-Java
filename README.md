@@ -1,5 +1,5 @@
 # BotDirectlineApp-Java
-This is a Sample of Bot Framework Direct Line API with Java. 
+This is a sample of Bot Framework Direct Line API with Java. 
 
 ## How to use this sample?
 You can use this sample after following below steps.
@@ -17,7 +17,7 @@ wget https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/2.1.4/swagger
 java -jar swagger-codegen-cli-2.1.4.jar generate -i swagger.json -l java
 ```
 
-After generating Java codes, there will be some malformed codes. I have revised two points. 
+After generating Java codes, there will be some malformed codes. Revise two classes. 
 
 ### io.swagger.client.model.Fact.java class
 Generated code is below.
